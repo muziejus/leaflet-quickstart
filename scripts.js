@@ -59,14 +59,45 @@ $.getJSON(velibStationUrl, stationData => {
   });
   // And add it to the map
   velibStationsLayer.addTo(map);
+
+  // Now convert the layer to GeoJSON so we can work on it with Turf.
+  const velibStationsGeoJSON = velibStationsLayer.toGeoJSON();
+  // In turf, let's buffer the points and then dissolvethem together
+  const bufferedStations = turf.dissolve(
+    turf.buffer(
+      velibStationsGeoJSON, 400, { units: "meters" }
+    )
+  );
+  L.geoJSON(bufferedStations, {
+    style() {
+      return {
+        color: "#ff0000",
+        weight: 5,
+        fillOpacity: 0.0
+      };
+    }
+  }).addTo(map);
 }); // close $.getJSON()
 
 // Change the card header:
 $("#card-header-text").html("<strong>Workshop à rue d’Ulm</strong>");
 
-// Change the card body:
-$("#outlet-card-body").html("Here is some new body text.");
+// This won't work unless we are running a local server.
+//
+// In the terminal, run:
+//
+// python -m http:server 8888 &
+//
+// or, if you don't have python 3:
+//
+// python -m SimpleHTTPServer 8888 &
+//
+// Now, point your browser to http://localhost:8888/
 
-
-
-
+// Change the card body to the body.md file:
+$.ajax({
+  url: "body.md",
+  success(bodyMarkdown) {
+    $("#outlet-card-body").html(md.render(bodyMarkdown));
+  }
+});
