@@ -1,0 +1,28 @@
+env:
+  browser: true
+  es6: true
+  node: true
+  jquery: true
+extends: 'eslint:recommended'
+parserOptions:
+  sourceType: module
+rules:
+  eqeqeq:
+    - error
+    - always
+  indent:
+    - error
+    - 2
+  linebreak-style:
+    - error
+    - unix
+  quotes:
+    - error
+    - double
+  semi:
+    - error
+    - always
+globals: 
+  "L": true
+  "markdownit": true
+  "markdownitFootnote": true
