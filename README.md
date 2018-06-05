@@ -18,6 +18,7 @@ analyzing data inside the browser.
 which provides quick, configurable basemaps for Leaflet
 * [Markdown-it](https://github.com/markdown-it/markdown-it), a Markdown
 parser.
+* [d3](http://d3js.org/), for parsing CSV files. 
 * [FontAwesome](https://fontawesome.com/), to provide icons.
 
 ## Installation

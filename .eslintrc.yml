@@ -27,3 +27,4 @@ globals:
   "markdownit": true
   "markdownitFootnote": true
   "turf": true
+  "d3": true
