@@ -59,7 +59,7 @@
 // behaves somewhat like one. The last member, however, is the header row.
 
 /*
-d3.csv("places.csv", (data) => {
+d3.csv("places.csv", data => {
   return {
     nom: data.nom,
     latitude: +data.latitude,
@@ -67,28 +67,39 @@ d3.csv("places.csv", (data) => {
     type: data.type,
     lien: data.lien
   };
-}, (list) => {
+}, list => {
   // iterate over the list object
-  list.forEach((place) => {
+  list.forEach(place => {
     // We need to make sure that we ignore the object that only holds the headers.
     if(place.latitude){
-      // We change the color based on the value of the "type" property.
+      // We change the color and icon (see below) based on the value of the
+      // "type" property.
       let color;
+      let icon;
       switch (place.type) {
       case "batuniv":
-        color = "#ff0000";
+        color = "#cc0000";
+        icon = "graduation-cap";
         break;
       case "restmex":
-        color = "#00ff00";
+        color = "#00cc00";
+        icon = "utensils";
         break;
       case "librairie":
-        color = "#0000ff";
+        color = "#0000cc";
+        icon = "book";
         break;
       }
       // And then we use the other properties to make add a circle marker to the map.
       L.circleMarker([place.latitude, place.longitude],
         { fillColor: color, color: color }
       ).bindPopup(place.nom).addTo(map);
+      // Alternatively, we can use icons from font-awesome.
+      // L.marker([place.latitude, place.longitude],
+      //   { icon: L.divIcon(
+      //     { html: "<i style='color: " + color + "' class='fa fa-" + icon + "'></i>", iconSize: [30, 30] }
+      //   )}
+      // ).bindTooltip(place.nom).addTo(map);
     }
   });
 });
