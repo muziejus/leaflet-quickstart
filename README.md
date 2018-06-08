@@ -12,7 +12,7 @@ The webpage loads the following extensions and makes them available to
 
 * [Bootstrap](http://getbootstrap.com) for styling popups and the cards that
 float above the map in the `#above-map` container.
-* [Full jQuery](http://jquery.com) to prove access to the `$.getJSON()`
+* [Full jQuery](http://jquery.com) to provide access to the `$.getJSON()`
 method, should the learner want to download GeoJSON data from somewhere else.
 * [Turf.js](http://turfjs.org), an advanced geospatial analysis tool for
 analyzing data inside the browser.
