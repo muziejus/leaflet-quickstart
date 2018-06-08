@@ -9,11 +9,11 @@
 //
 // In the terminal, cd into the directory in which this file rests and run:
 //
-// python3 -m http:server 8888 &
+// python3 -m http:server 8888
 //
 // or, if you don't have python 3:
 //
-// python -m SimpleHTTPServer 8888 &
+// python -m SimpleHTTPServer 8888
 //
 // Now, point your browser to http://localhost:8888/
 //
