@@ -3,7 +3,7 @@
 A container for quickstarting [Leaflet](http://leafletjs.com) projects for
 learners, `leaflet-quickstart` provides a single webpage, `index.html`, that
 is a full-page map that can be controlled via the JavaScript file
-`scripts.js`. 
+`scripts.js`.
 
 The webpage loads the following extensions and makes them available to
 `scripts.js`:
@@ -18,7 +18,7 @@ analyzing data inside the browser.
 which provides quick, configurable basemaps for Leaflet
 * [Markdown-it](https://github.com/markdown-it/markdown-it), a Markdown
 parser.
-* [d3](http://d3js.org/), for parsing CSV files. 
+* [d3](http://d3js.org/), for parsing CSV files and being awesome.
 * [FontAwesome](https://fontawesome.com/), to provide icons.
 
 ## Installation
@@ -57,7 +57,7 @@ method to access JSON files on the internet. The signature for that method is
 pretty straightforward, and you can [read more about it from
 jQuery](https://api.jquery.com/jquery.getjson/). If you want to access files
 in the same folder as your `index.html` and `scripts.js` files, however, you
-will need to spin up a local webserver. 
+will need to spin up a local webserver.
 
 **Note:** Once your JSON files are pushed to GitHub, you can access them using
 the GitHub url above and stop using a local webserver, if you like.
