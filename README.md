@@ -1,5 +1,7 @@
 # leaflet-quickstart
 
+![Project Demo Screenshot](https://i.imgur.com/nF8ZR40.jpg)
+
 A container for quickstarting [Leaflet](http://leafletjs.com) projects for
 learners, `leaflet-quickstart` provides a single webpage, `index.html`, that
 is a full-page map that can be controlled via the JavaScript file

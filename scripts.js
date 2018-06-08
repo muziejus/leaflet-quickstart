@@ -179,6 +179,10 @@ $.getJSON("paris_arr.geojson", geodata => {
 // Change the card header:
 // $("#card-header-text").html("<strong>Workshop à rue d’Ulm</strong>");
 
-// Change the card body to the body.md file: $.ajax({ url: "body.md",
-// success(bodyMarkdown) {
-// $("#outlet-card-body").html(md.render(bodyMarkdown)); } });
+// Change the card body to the body.md file: 
+
+// $.ajax({ url: "body.md",
+//   success(bodyMarkdown) {
+//     $("#outlet-card-body").html(md.render(bodyMarkdown)); 
+//   } 
+// });
