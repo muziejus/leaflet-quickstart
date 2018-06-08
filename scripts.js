@@ -117,8 +117,8 @@ d3.csv("places.csv", data => {
 $.getJSON(velibStationUrl, stationData => {
   // Create a layer group for the stations
   const velibStationsLayer = L.layerGroup();
-  
-  // stationData has an array inside of it called "records" that 
+
+  // stationData has an array inside of it called "records" that
   // holds each station's data. Within each record, there's a "fields"
   // object that has three fields we're interested in: "name," "lat,"
   // and "lon."
@@ -159,14 +159,26 @@ $.getJSON(velibStationUrl, stationData => {
 
 */
 
+// Or, we can use $.getJSON() on our own file of the Parisian Arrondisements.
+
+/*
+$.getJSON("paris_arr.geojson", geodata => {
+  L.geoJSON(geodata, {
+    style() {
+      return {
+        color: "#ff0000",
+        weight: 5,
+        fillOpacity: 0.0
+      };
+    }
+  }).addTo(map);
+});
+*/
+
 // Use jQuery to manipulate the html elements.
 // Change the card header:
 // $("#card-header-text").html("<strong>Workshop à rue d’Ulm</strong>");
 
-// Change the card body to the body.md file:
-// $.ajax({
-//   url: "body.md",
-//   success(bodyMarkdown) {
-//     $("#outlet-card-body").html(md.render(bodyMarkdown));
-//   }
-// });
+// Change the card body to the body.md file: $.ajax({ url: "body.md",
+// success(bodyMarkdown) {
+// $("#outlet-card-body").html(md.render(bodyMarkdown)); } });
