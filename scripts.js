@@ -93,11 +93,11 @@ d3.csv("places.csv", data => {
       // And then we use the other properties to make add a circle marker to the map.
       L.circleMarker([place.latitude, place.longitude],
         { fillColor: color, color: color }
-      ).bindPopup(place.nom).addTo(map);
+      ).bindPopup(`<h3><a href="${place.lien}">${place.nom}</a></h3>`).addTo(map);
       // Alternatively, we can use icons from font-awesome.
       // L.marker([place.latitude, place.longitude],
       //   { icon: L.divIcon(
-      //     { html: "<i style='color: " + color + "' class='fa fa-" + icon + "'></i>", iconSize: [30, 30] }
+      //     { html: `<i style="color: ${color}" class="fa fa-${icon}"></i>`, iconSize: [30, 30] }
       //   )}
       // ).bindTooltip(place.nom).addTo(map);
     }
